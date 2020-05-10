@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screen1Activity">
+
+    <Button
+        android:id="@+id/SendBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="93dp"
+        android:background="#A54CAF50"
+        android:text="send"
+        android:textColor="#E91E63"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EdTxName" />
+
+    <Button
+        android:id="@+id/CleanBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="#FFC107"
+        android:text="clean"
+        app:layout_constraintStart_toStartOf="@+id/SendBtn"
+        app:layout_constraintTop_toBottomOf="@+id/SendBtn" />
+
+    <EditText
+        android:id="@+id/EdTxName"
+        android:layout_width="207dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxPod"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/EdTxMail"
+        android:layout_width="210dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="99dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="e_mail"
+        android:inputType="textEmailAddress"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/SendBtn"
+        app:layout_constraintEnd_toEndOf="@+id/EdTxName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/EdTxName"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/TxPod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="320dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="60dp"
+        android:text="Подписка"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/EdTxName"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Comment"
+        android:layout_width="0dp"
+        android:layout_height="139dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="104dp"
+        android:text=" "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CleanBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
