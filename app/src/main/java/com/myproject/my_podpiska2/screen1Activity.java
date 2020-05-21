@@ -2,7 +2,6 @@ package com.myproject.my_podpiska2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,46 +9,48 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class screen1Activity extends AppCompatActivity {
-    private EditText EdTxName;
-    private EditText EdTxMail;
-    private TextView TxPod;
-    private Button CleanBtn;
-    private Button SendBtn;
-    private TextView Comment;
+    private EditText edTxName;
+    private EditText edTxMail;
+    private TextView txPod;
+    private Button cleanBtn;
+    private Button sendBtn;
+    private TextView comment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen1);
         init();
-        SendBtn.setOnClickListener(new View.OnClickListener() {
+        sendBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String NameStr = EdTxName.getText().toString();
-                String MailStr = EdTxMail.getText().toString();
-                Comment.setText("Подписка успешно оформлена для" + "  " + NameStr +"  " +"на электронный адрес" + "  " + MailStr);
+                String nameStr = edTxName.getText().toString();
+                String mailStr = edTxMail.getText().toString();
+                String userInfo = getString(R.string.welcome_msg, nameStr, mailStr);
+                comment.setText(userInfo);
+
             }
 
         });
 
-        CleanBtn.setOnClickListener(new View.OnClickListener() {
+        cleanBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Comment.setText(null);
-                EdTxName.setText(null);
-                EdTxMail.setText(null);
-                EdTxName.setFocusableInTouchMode(true); EdTxName.requestFocus();
+                comment.setText("");
+                edTxName.getText().clear();
+                edTxMail.getText().clear();
+                edTxName.setFocusableInTouchMode(true); edTxName.requestFocus();
             }
         });
     }
 
     private void init() {
-        EdTxName = findViewById(R.id.EdTxName);
-        EdTxMail = findViewById(R.id.EdTxMail);
-        TxPod = findViewById(R.id.TxPod);
-        CleanBtn = findViewById(R.id.CleanBtn);
-        SendBtn = findViewById(R.id.SendBtn);
-        Comment = findViewById(R.id.Comment);
+        edTxName = findViewById(R.id.edTxName);
+        edTxMail = findViewById(R.id.edTxMail);
+        txPod = findViewById(R.id.txPod);
+        cleanBtn = findViewById(R.id.cleanBtn);
+        sendBtn = findViewById(R.id.sendBtn);
+        comment = findViewById(R.id.comment);
     }
 
 }
