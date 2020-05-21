@@ -7,7 +7,7 @@
     tools:context=".screen1Activity">
 
     <Button
-        android:id="@+id/SendBtn"
+        android:id="@+id/sendBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="93dp"
@@ -16,20 +16,20 @@
         android:textColor="#E91E63"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EdTxName" />
+        app:layout_constraintTop_toBottomOf="@+id/edTxName" />
 
     <Button
-        android:id="@+id/CleanBtn"
+        android:id="@+id/cleanBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:background="#FFC107"
         android:text="clean"
-        app:layout_constraintStart_toStartOf="@+id/SendBtn"
-        app:layout_constraintTop_toBottomOf="@+id/SendBtn" />
+        app:layout_constraintStart_toStartOf="@+id/sendBtn"
+        app:layout_constraintTop_toBottomOf="@+id/sendBtn" />
 
     <EditText
-        android:id="@+id/EdTxName"
+        android:id="@+id/edTxName"
         android:layout_width="207dp"
         android:layout_height="49dp"
         android:layout_marginEnd="99dp"
@@ -44,11 +44,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TxPod"
+        app:layout_constraintTop_toBottomOf="@+id/txPod"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/EdTxMail"
+        android:id="@+id/edTxMail"
         android:layout_width="210dp"
         android:layout_height="51dp"
         android:layout_marginBottom="28dp"
@@ -58,14 +58,14 @@
         android:hint="e_mail"
         android:inputType="textEmailAddress"
         android:textColorLink="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/SendBtn"
-        app:layout_constraintEnd_toEndOf="@+id/EdTxName"
+        app:layout_constraintBottom_toTopOf="@+id/sendBtn"
+        app:layout_constraintEnd_toEndOf="@+id/edTxName"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/EdTxName"
+        app:layout_constraintStart_toStartOf="@+id/edTxName"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/TxPod"
+        android:id="@+id/txPod"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="320dp"
@@ -74,14 +74,14 @@
         android:layout_marginTop="60dp"
         android:text="Подписка"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/EdTxName"
+        app:layout_constraintBottom_toTopOf="@+id/edTxName"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/Comment"
+        android:id="@+id/comment"
         android:layout_width="0dp"
         android:layout_height="139dp"
         android:layout_marginEnd="57dp"
@@ -90,6 +90,6 @@
         android:text=" "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CleanBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/cleanBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
